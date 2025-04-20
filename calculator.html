@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:white;
+        margin-top: 10%;
+
+        }
+       #inp{
+        width: 400px;
+        background-color: white;
+        color: black;
+       }
+       input{
+        width: 99px;
+        height: 50px;
+        margin-top: 10px;
+        background-color: black;
+        color: white;
+       }
+       input:hover{
+        background-color: rgb(248, 242, 240);
+        color: black;
+       }
+    </style>
+</head>
+<body>
+    <form>
+    
+    <input id="inp" type="text" ><br>
+    <input type="button" onclick="clear1()" value="AC">
+    <input type="button" onclick="display(value)" value="+/-">
+    <input type="button" onclick="display(value)" value="%">
+    <input type="button" onclick="display(value)" value="/">
+    <br>
+
+    <input type="button" onclick="display(value)" value="7">
+    <input type="button" onclick="display(value)" value="8">
+    <input type="button" onclick="display(value)" value="9">
+    <input type="button" onclick="display(value)" value="*"><br>
+
+    <input type="button" onclick="display(value)" value="4">
+    <input type="button" onclick="display(value)" value="5">
+    <input type="button" onclick="display(value)" value="6">
+    <input type="button" onclick="display(value)" value="-"><br>
+
+    <input type="button" onclick="display(value)" value="1">
+    <input type="button" onclick="display(value)" value="2">
+    <input type="button" onclick="display(value)" value="3">
+    <input type="button" onclick="display(value)" value="+"><br>
+
+    <input type="button" onclick="display(value)" value="#">
+    <input type="button" onclick="display(value)" value="0">
+    <input type="button" onclick="display(value)" value=".">
+    <input type="button" onclick="result()" value="=">
+    
+</form>
+<script>
+    let inp1=document.getElementById('inp')
+  var display=(value)=>{
+   inp1.value+=value;
+
+    }
+var result=()=>{
+    let result=eval(inp1.value)
+    inp1.value=result
+}
+let clear1=()=>{ 
+    inp1.value=" "
+}
+
+
+
+</script>
+</body>
+</html>
